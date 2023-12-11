@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video Player</title>
+    <title>Custom Video Player</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,12 +18,34 @@
 
         #video-container {
             width: 70%;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        #play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div id="video-container">
-        <iframe id="youtube-player" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        <video id="custom-player" controls>
+            <!-- Video source goes here -->
+        </video>
+        <button id="play-button">Play</button>
     </div>
 
     <script src="script.js"></script>
